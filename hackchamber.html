@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>HAck </title>
+  <style type="text/css">
+    body {
+      color: purple;
+      background-color: #d8da3d;
+      background: url('https://i.gifer.com/3HeZ.gif') repeat;
+      font-family: Arial, sans-serif;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    address {
+      margin-top: 1em;
+      padding-top: 1em;
+      border-top: thin dotted;
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    .back-button {
+      display: inline-block;
+      font-size: 2em;
+      font-weight: bold;
+      padding: 20px 40px;
+      background: transparent;
+      color: white;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 120px;
+      animation: glitchEffect 1s infinite alternate;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    @keyframes glitchEffect {
+      0% {
+        transform: translateX(-50%) skewX(0deg);
+        opacity: 1;
+      }
+      25% {
+        transform: translateX(-50%) skewX(5deg);
+        opacity: 0.8;
+      }
+      50% {
+        transform: translateX(-50%) skewX(-5deg);
+        opacity: 0.6;
+      }
+      75% {
+        transform: translateX(-50%) skewX(5deg);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateX(-50%) skewX(0deg);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+ <audio autoplay=1 loop=1>
+<source src="matrixsound.mp3" type="audio/mpeg">
+Votre navigateur ne supporte pas l'élément audio.
+</audio>
+
+  <div class="content">
+    <h1>Chamber</h1>
+    <img src="http://www.image-heberg.fr/files/1757363347804217256.gif" alt="YD0Q.gif" />
+    <img src="https://i.gifer.com/U1S.gif" alt="Gif 1" /><img src="https://i.gifer.com/a4P.gif" alt="Gif 2" />
+    <img src="http://www.image-heberg.fr/files/1757363347804217256.gif" alt="YD0Q.gif" />
+
+    <p>Bienvenue chez moi!!</p>
+    <img src="http://www.image-heberg.fr/files/175736293869569094.gif" alt="76cE.gif" /><img src="http://www.image-heberg.fr/files/175736293869569094.gif" alt="76cE.gif" />
+    <p></p>
+    <img src="http://www.image-heberg.fr/files/17573630072852002354.gif" alt="22Cl.gif" />
+    <img src="http://www.image-heberg.fr/files/17573631252852002354.gif" alt="QLdq.gif" />
+    <img src="http://www.image-heberg.fr/files/17573630072852002354.gif" alt="22Cl.gif" />
+
+    <address>Fait le très très longtemps<br> par moi</address>
+    <img src="http://www.image-heberg.fr/files/17573620133075041044.gif" alt="XPu.gif" />
+    <p></p>
+    <button class="back-button" onclick="backPage()">Back</button>
+  </div>
+
+  <script>
+    
+    function backPage() {
+      window.location.href = 'index.html';
+    }
+  </script>
+
+</body>
+</html>
