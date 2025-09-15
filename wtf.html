@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WTF!!</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background: url('Otonoke.gif') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5em;
+            margin-top: 50px;
+            text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+        }
+
+        #movingGif {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            pointer-events: none;
+        }
+
+        #psyButton {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px 40px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 20px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+            color: black;
+            cursor: pointer;
+            animation: rainbow 2s infinite linear;
+            box-shadow: 0 0 20px #fff;
+        }
+
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WTF!!</h1>
+
+    <img src="JdJapon.gif" id="movingGif" alt="gif bizarre">
+
+    <audio src="creepyBBBB.mp3" autoplay=1 loop=1></audio>
+
+    <a href="index.html">
+        <button id="psyButton">RETOUR</button>
+    </a>
+
+    <script>
+        const gif = document.getElementById("movingGif");
+        let x = 100, y = 100;
+        let dx = 3, dy = 2;
+
+        function moveGif() {
+            const maxX = window.innerWidth - gif.clientWidth;
+            const maxY = window.innerHeight - gif.clientHeight;
+
+            x += dx;
+            y += dy;
+
+            if (x <= 0 || x >= maxX) dx *= -1;
+            if (y <= 0 || y >= maxY) dy *= -1;
+
+            gif.style.left = x + "px";
+            gif.style.top = y + "px";
+
+            requestAnimationFrame(moveGif);
+        }
+
+        moveGif();
+    </script>
+
+</body>
+</html>
