@@ -64,24 +64,17 @@
       margin-top: 30px;
     }
 
-    .exit-button {
-      font-size: 2em;
-      font-weight: bold;
-      padding: 15px 30px;
-      background-color: rgba(255, 0, 0, 0.7);
-      border: none;
-      border-radius: 10px;
-      color: white;
-      cursor: pointer;
-      text-transform: uppercase;
-      animation: buttonAnimation 0.5s infinite alternate;
+    .column-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
-    .musee-button {
+    .musee-button, .hack-button, .japon-button, .exit-button {
       font-size: 2em;
       font-weight: bold;
       padding: 15px 30px;
-      background-color: #6f4f28;
+      background-color: #8b5e3c;
       border: none;
       border-radius: 10px;
       color: white;
@@ -89,19 +82,7 @@
       text-transform: uppercase;
       animation: buttonAnimation 0.5s infinite alternate;
     }
-
-    .hack-button {
-      font-size: 2em;
-      font-weight: bold;
-      padding: 15px 30px;
-      background-color: #8b5e3c; 
-      border: none;
-      border-radius: 10px;
-      color: white;
-      cursor: pointer;
-      text-transform: uppercase;
-      animation: buttonAnimation 0.5s infinite alternate;
-    }
+  
 
     @keyframes buttonAnimation {
       0% {
@@ -126,9 +107,9 @@
       }
     }
 
-    .exit-button:hover, .musee-button:hover, .hack-button:hover {
+    .musee-button:hover, .hack-button:hover, .japon-button:hover, .exit-button:hover {
       transform: scale(1.1);
-    }
+   }
 
   </style>
 </head>
@@ -138,30 +119,37 @@
 
   <h1>BIENVENUE</h1>
 
-  <video autoplay loop>
+  <video autoplay=1 loop=1>
     <source src="oiia.mp4" type="video/mp4">
   </video>
 
 
   <div class="button-container">
-    <button class="musee-button" onclick="redirectTojoey()">Musée de Joey</button>
+    <button class="musee-button" onclick="redirectToProut()">Musée de Joey</button>
 
-    <button class="hack-button" onclick="redirectToChambre()">HAck</button>
+    <div class="column-buttons">
+      <button class="hack-button" onclick="redirectToChambre()">HAck</button>
+      <button class="exit-button" onclick="exitPage()">EXIT</button>
+    </div>
 
-    <button class="exit-button" onclick="exitPage()">EXIT</button>
+    <button class="japon-button" onclick="redirectToJapon()">Japon</button>
   </div>
 
   <script>
     function exitPage() {
-      window.location.href = 'https://www.google.com.hk/webhp?hl=zh-CN&sourceid=cnhp'; 
+      window.location.href = 'index.html'; 
     }
 
-    function redirectTojoey() {
+    function redirectToProut() {
       window.location.href = 'musee.html'; 
     }
 
     function redirectToChambre() {
       window.location.href = 'hackchamber.html'; 
+    }
+
+    function redirectToJapon() {
+      window.location.href = 'wtf.html'; 
     }
   </script>
 
